@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class FriendAdpater (
+class FriendAdapter (
     private val friends: MutableList<Friend>
-):RecyclerView.Adapter<FriendAdpater.FriendViewHolder>(){
+):RecyclerView.Adapter<FriendAdapter.FriendViewHolder>(){
 
     class FriendViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
         val tvFriendTrackComp: TextView = itemView.findViewById(R.id.tvFriendTrackComp)

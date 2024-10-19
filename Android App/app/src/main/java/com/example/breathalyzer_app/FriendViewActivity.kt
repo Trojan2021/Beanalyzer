@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class FriendViewActivity : AppCompatActivity() {
 
-    private lateinit var friendAdapter : FriendAdpater
+    private lateinit var friendAdapter : FriendAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +25,7 @@ class FriendViewActivity : AppCompatActivity() {
         val rvListOfFriends = findViewById<RecyclerView>(R.id.rvFriendView)
         val addFriend = findViewById<Button>(R.id.btnAddFriend)
 
-        friendAdapter = FriendAdpater(mutableListOf())
+        friendAdapter = FriendAdapter(mutableListOf())
         rvListOfFriends.adapter = friendAdapter
         rvListOfFriends.layoutManager = LinearLayoutManager(this)
 
