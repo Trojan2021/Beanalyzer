@@ -2,11 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="380dp"
+    android:layout_width="match_parent"
     android:layout_height="100dp"
     android:layout_gravity="center_horizontal"
     android:background="@drawable/round_corners_big_box"
-    android:padding="16dp">
+    android:padding="16dp"
+    app:layout_constraintStart_toEndOf="">
 
     <TextView
         android:id="@+id/tvPlayerBAC"
@@ -19,12 +20,13 @@
         android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvFriendTrackComp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvFriendTrackComp" />
+        app:layout_constraintTop_toTopOf="@+id/tvFriendTrackComp"
+        />
 
 
     <TextView
         android:id="@+id/tvFriendTrackComp"
-        android:layout_width="250dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/round_corners_small_box"
         android:elevation="4dp"
@@ -35,7 +37,23 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tempView"/>
+    <TextView
+        android:id="@+id/tempView"
+        android:layout_width="16dp"
+        android:layout_height="wrap_content"
+        android:text = ""
+        app:layout_constraintEnd_toStartOf="@+id/tvPlayerBAC"
+        app:layout_constraintStart_toEndOf="@+id/tvFriendTrackComp"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/tempBottomBox"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf=""/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
