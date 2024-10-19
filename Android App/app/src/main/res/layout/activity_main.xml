@@ -9,7 +9,7 @@
 
     <FrameLayout
         android:id="@+id/frgLoginContainer"
-        android:name="com.example.cse5236mobileapp.LogInFragment"
+        android:name="com.example.breathalyzer_app.LogInFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
