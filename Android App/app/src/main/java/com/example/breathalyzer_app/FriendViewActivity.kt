@@ -1,6 +1,8 @@
 package com.example.breathalyzer_app
 
+import android.content.Intent
 import android.os.Bundle
+import android.os.Parcelable
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -30,6 +32,10 @@ class FriendViewActivity : AppCompatActivity() {
         rvListOfFriends.layoutManager = LinearLayoutManager(this)
 
         addFriend.setOnClickListener {
+            /*
+            val intent = Intent(this, FriendFinderActivity::class.java)
+            startActivity(intent)
+            */
             val friendName = "TESTING"
             val bac = "0.08"
             if(friendName.isNotEmpty())
@@ -37,7 +43,6 @@ class FriendViewActivity : AppCompatActivity() {
                 val friend = Friend(friendName, bac)
                 friendAdapter.addFriend(friend)
             }
-
         }
     }
 }

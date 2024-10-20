@@ -54,7 +54,7 @@ class FriendFinderAdapter(
         val db = Firebase.firestore
 
         var data: MutableMap<String, Any>? = null
-        val docRef = db.collection("friends").document(dbUser)
+        val docRef = db.collection("Users").document(dbUser)
         docRef.get()
             .addOnSuccessListener { document ->
                 if (document != null) {
