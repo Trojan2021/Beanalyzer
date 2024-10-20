@@ -6,8 +6,7 @@
     android:layout_height="100dp"
     android:layout_gravity="center_horizontal"
     android:background="@drawable/round_corners_big_box"
-    android:padding="16dp"
-    app:layout_constraintStart_toEndOf="">
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/tvPlayerBAC"
@@ -52,8 +51,7 @@
         android:layout_width="match_parent"
         android:layout_height="16dp"
         android:text=""
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf=""/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

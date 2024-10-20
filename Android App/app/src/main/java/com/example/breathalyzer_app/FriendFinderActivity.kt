@@ -1,6 +1,7 @@
 package com.example.breathalyzer_app
 
 import android.os.Bundle
+import android.widget.EditText
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -24,10 +25,15 @@ class FriendFinderActivity : AppCompatActivity() {
         }
         val rvSearchedFriends = findViewById<RecyclerView>(R.id.rvSearchedFriends)
         val imbSearch = findViewById<ImageButton>(R.id.imSearchButton)
+        val etSearch = findViewById<EditText>(R.id.etSearch)
 
         friendFinderAdapter = FriendFinderAdapter(mutableListOf())
         rvSearchedFriends.adapter = friendFinderAdapter
         rvSearchedFriends.layoutManager = LinearLayoutManager(this)
+
+        imbSearch.setOnClickListener {
+
+        }
 
     }
 }
