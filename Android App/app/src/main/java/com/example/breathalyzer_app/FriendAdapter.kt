@@ -30,6 +30,7 @@ class FriendAdapter (
         friends.remove(friend)
         notifyDataSetChanged()
     }
+    fun get
 
     override fun onBindViewHolder(holder: FriendViewHolder, position: Int) {
         val curFriend = friends[position]

@@ -26,6 +26,7 @@ class FriendViewActivity : AppCompatActivity() {
         }
         val rvListOfFriends = findViewById<RecyclerView>(R.id.rvFriendView)
         val addFriend = findViewById<Button>(R.id.btnAddFriend)
+        val readValueButton = findViewById<Button>(R.id.btnRecordBAC)
 
         friendAdapter = FriendAdapter(mutableListOf())
         rvListOfFriends.adapter = friendAdapter
@@ -43,6 +44,11 @@ class FriendViewActivity : AppCompatActivity() {
                 val friend = Friend(friendName, bac)
                 friendAdapter.addFriend(friend)
             }
+        }
+
+        readValueButton.setOnClickListener {
+            val intent = Intent(this, ReadBACActivity::class.java)
+            startActivity(intent)
         }
     }
 }
